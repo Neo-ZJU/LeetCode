@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class JianZhi03 {
     public static void main(String[] args) {
-        int abcabcbb = new Solution03().lengthOfLongestSubstring("abcabcbb");
+        int abcabcbb = new Solution03().lengthOfLongestSubstring("abcabcbbzzz");
         System.out.println(abcabcbb);
     }
 }
