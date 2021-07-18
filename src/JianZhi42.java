@@ -1,5 +1,7 @@
 public class JianZhi42 {
-
+/**
+ * push一次更新
+ */
 }
 
 class Solution42 {
