@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class LeetCode1838 {
 }
@@ -16,5 +17,8 @@ class Solution1838 {
             max = Math.max(max, i - left + 1);
         }
         return max;
+
+
+
     }
 }
