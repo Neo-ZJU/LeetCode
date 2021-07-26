@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class LeetCode1743 {
 }
@@ -24,7 +21,7 @@ class Solution1743 {
                 ans[0] = entry.getKey();
             }
         }
-
+        Arrays.binarySearch(new int[10],1, 10,0);
         ans[1] = map.get(ans[0]).get(0);
 
         for(int i = 2; i <= len; i++){
