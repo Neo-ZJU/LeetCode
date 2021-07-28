@@ -35,4 +35,15 @@ class Solution671 {
         dfs(root.left, rootVal);
         dfs(root.right, rootVal);
     }
+}class Solution538 {
+    int sum = 0;
+    public TreeNode convertBST(TreeNode root) {
+        if(root != null){
+            convertBST(root.right);
+            sum += root.val;
+            root.val = sum;
+            convertBST(root.left);
+        }
+        return root;
+    }
 }
