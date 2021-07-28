@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class LeetCode671 {
 }
 
@@ -45,5 +48,34 @@ class Solution671 {
             convertBST(root.left);
         }
         return root;
+    }
+}
+class Solution94 {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        TreeNode pre = null;
+
+        while(root != null){
+            if(root.left != null){
+                pre = root.left;
+                while(pre.right != null && pre.right != root){
+                    pre = pre.right;
+                }
+                if(pre.right == null){
+                    //左子树没有访问完
+                    pre.right = root;
+                    root = root.left;
+                }else{
+                    //左子树访问完了
+                    ans.add(root.val);
+                    pre.right = null;
+                    root = root.right;
+                }
+            }else{
+                ans.add(root.val);
+                root = root.right;
+            }
+        }
+        return ans;
     }
 }
